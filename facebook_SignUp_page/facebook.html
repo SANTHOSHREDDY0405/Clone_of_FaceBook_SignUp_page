@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+           
+        }
+
+        .signup-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width:30dvw;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .in{
+          width: 45%;
+          height: 3vh;
+        }
+        .d{
+          width: 30%;
+          height: 10%;
+        }
+        #f{
+          font-weight: 700;
+            font-size:x-large;
+            color: blue;
+        }
+        .ll{
+          width: 29.5vw;
+          height: 3vh;
+        }
+        .inp{ 
+           /* width: 90%;  */
+           /* height: 3vw; */
+            background-color: transparent;
+             text-align: center; 
+             font-size: 2vw; 
+             border: none;
+              outline: none;
+               font-weight: bold;
+                letter-spacing: 3px; 
+                /* display: none; */
+         }
+         /* .geninp { 
+          width: 15px;
+         } */
+         .gen
+         {
+          width: 8vw;
+           display: flex;
+           height: 3vh;
+           border-radius: 5px;
+           align-items: center;
+           justify-content: space-evenly;
+           border: 2px solid black;
+           padding-left: 10px;
+           /* display: none; */
+           font-size: small;
+    
+         }
+         #gendercontainer
+          {
+              display: flex;
+              flex-direction:row;
+              justify-content: space-evenly;
+              /* align-items: center; */
+              /* height:100%; */
+              
+          }
+          .sel{
+            width: 27%;
+            height: 3vh;
+          }
+         /* input:required{
+          border:2px solid red
+         } */
+         .context-box {
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hide the context box */
+        }
+    </style>
+</head>
+<body>
+  
+  <div id="f">facebook</div>
+  <form  onsubmit="submitForm(event)">
+    <div class="signup-container">
+        <header style="font-size: large;text-align: center;font-weight: 700;">Create a new account <br><span style="font-size: small;font-weight: 300;">it's quick and easy</span></header>
+            
+            <div style="display: flex;justify-content: space-between;">
+              <input type="text" class="in" id="firstName" placeholder="First Name" onmouseover="color()" required>
+              <input type="text" class="in" id="lastName" placeholder="Last Name" required onmouseover="color1()">
+            </div>
+             <div>
+              <input type="email" class="ll" id="email" placeholder="email"  required  onmouseover="color2()">
+             </div>
+            <div>
+              <input type="password" id="password" class="ll" placeholder="new Password" required title="enter password give" onmouseover="color3()"><h1 id="pass"></h1>
+            </div>
+            <div>
+                <label for="date of birth" style="font-size: small;">Date Of Birth</label><br>
+                <div style="display: flex;justify-content:space-between">
+                  <select name="" id="" class="sel">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+              <select name="" id="" class="sel">
+                <option value="january">jan</option>
+                <option value="february">feb</option>
+                <option value="march">march</option>
+                <option value="april">april</option>
+                <option value="may">may</option>
+                <option value="june">jun</option>
+                <option value="jul">jul</option>
+                <option value="aug">aug</option>
+                <option value="sep">sep</option>
+                <option value="october">oct</option>
+                <option value="november">nov</option>
+                <option value="descember">december</option>
+              </select>
+              <select name="" id="" class="sel">
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+                </div>
+           </div>
+           <div id="grndercontainer" > 
+            <label style="font-size:14px;font-weight:100;">Gender</label> <br>
+            <div style="display: flex;justify-content: space-between;">
+              <div class="gen" style="float: left;"> <label >Male</label> <input type="radio" name="g"  class="inp geninp" onmouse> </div>
+
+             <div class="gen" style="float: left;"> <label >FeMale</label> <input type="radio" name="g"  class="inp geninp"> </div>
+
+             <div class="gen"> <label >others</label> <input type="radio" name="g"   class="inp geninp"> </div> </div>
+           <div>
+            </div>
+            
+          </div>
+          <div style="font-size: 10px;">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt repudiandae laudantium deleniti nihil nam quod,
+          </div>
+          <div style="font-size: 10px;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, odit vitae necessitatibus adipisci obcaecati expedita rem sunt delectus placeat omnis vel 
+          </div>
+            <div style="text-align: center;">
+              <button type="submit" style="width:10vw;background-color: green;color: white;height:110%;border-radius: 5px;border: none;">Sign Up</button>
+            </div>
+            <div style="text-align: center;"><a href="#" style="text-decoration: none;">already have an account</a></div>
+            
+        </form>
+    </div>
+
+    <script>
+    function color() {
+    let contextBox = document.querySelector('.context-box');
+    if (!contextBox) {
+        contextBox = document.createElement('div');
+        contextBox.classList.add('context-box');
+        document.body.appendChild(contextBox);
+    }
+    const firstNameInput = document.getElementById('firstName');
+    const inputRect = firstNameInput.getBoundingClientRect();
+    contextBox.style.left = inputRect.left + 'px';
+    contextBox.style.top = inputRect.bottom + 'px';
+    contextBox.style.display = 'block';
+    contextBox.innerHTML = 'Enter valid details';
+    firstNameInput.addEventListener('mouseenter', function () {
+        
+        contextBox.style.display = 'block';
+    });
+    firstNameInput.addEventListener('mouseleave', function () {
+  
+        contextBox.style.display = 'none';
+    });
+}
+function color1() {
+    let contextBox = document.querySelector('.context-box');
+    if (!contextBox) {
+        contextBox = document.createElement('div');
+        contextBox.classList.add('context-box');
+        document.body.appendChild(contextBox);
+    }
+    const firstNameInput = document.getElementById('lastName');
+    const inputRect = firstNameInput.getBoundingClientRect();
+    contextBox.style.left = inputRect.left + 'px';
+    contextBox.style.top = inputRect.bottom + 'px';
+    contextBox.style.display = 'block';
+    contextBox.innerHTML = 'Enter valid details';
+    firstNameInput.addEventListener('mouseenter', function () {
+        
+        contextBox.style.display = 'block';
+    });
+    firstNameInput.addEventListener('mouseleave', function () {
+  
+        contextBox.style.display = 'none';
+    });
+}
+function color2() {
+    let contextBox = document.querySelector('.context-box');
+    if (!contextBox) {
+        contextBox = document.createElement('div');
+        contextBox.classList.add('context-box');
+        document.body.appendChild(contextBox);
+    }
+    const firstNameInput = document.getElementById('email');
+    const inputRect = firstNameInput.getBoundingClientRect();
+    contextBox.style.left = inputRect.left + 'px';
+    contextBox.style.top = inputRect.bottom + 'px';
+    contextBox.style.display = 'block';
+    contextBox.innerHTML = 'Enter valid details';
+    firstNameInput.addEventListener('mouseenter', function () {
+        
+        contextBox.style.display = 'block';
+    });
+    firstNameInput.addEventListener('mouseleave', function () {
+  
+        contextBox.style.display = 'none';
+    });
+}
+function color3() {
+    let contextBox = document.querySelector('.context-box');
+    if (!contextBox) {
+        contextBox = document.createElement('div');
+        contextBox.classList.add('context-box');
+        document.body.appendChild(contextBox);
+    }
+    const firstNameInput = document.getElementById('password');
+    const inputRect = firstNameInput.getBoundingClientRect();
+    contextBox.style.left = inputRect.left + 'px';
+    contextBox.style.top = inputRect.bottom + 'px';
+    contextBox.style.display = 'block';
+    contextBox.innerHTML = 'Enter valid details';
+    firstNameInput.addEventListener('mouseenter', function () {
+        
+        contextBox.style.display = 'block';
+    });
+    firstNameInput.addEventListener('mouseleave', function () {
+  
+        contextBox.style.display = 'none';
+    });
+}
+    </script>
+</body>
+</html>
